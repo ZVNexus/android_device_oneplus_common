@@ -2,4 +2,5 @@
 type persist_engineer_file, file_type;
 
 # SysFS
+type sysfs_oem, sysfs_type, fs_type;
 type sysfs_tri_state_key, sysfs_type, fs_type;
