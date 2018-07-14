@@ -12,21 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-COMMON_PATH := device/oneplus/common
+LOCAL_PATH := $(call my-dir)
 
-# Alert Slider
-PRODUCT_PACKAGES += \
-    TriStateHandler \
-    tri-state-key_daemon
-
-# Namespaces
-PRODUCT_SOONG_NAMESPACES += \
-    device/oneplus/common
-
-# Overlays
-PRODUCT_PACKAGES += \
-    AOSPAOnePlusFrameworks
-
-# SEPolicy
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    $(COMMON_PATH)/sepolicy/private
+include $(CLEAR_VARS)
+LOCAL_PACKAGE_NAME := AOSPAOnePlusFrameworks
+LOCAL_PRODUCT_MODULE := true
+LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
+LOCAL_SDK_VERSION := current
+include $(BUILD_RRO_PACKAGE)
