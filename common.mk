@@ -36,7 +36,8 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    AOSPAOnePlusFrameworks
+    AOSPAOnePlusFrameworks \
+    EmptyOverlay
 
 # SEPolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
