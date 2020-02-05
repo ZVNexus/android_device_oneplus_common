@@ -23,6 +23,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ParanoidDoze
 
+# Init
+PRODUCT_PACKAGES += \
+    init.oneplus.rc
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.oneplus
