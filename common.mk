@@ -19,6 +19,10 @@ PRODUCT_PACKAGES += \
     TriStateHandler \
     tri-state-key_daemon
 
+# Doze
+PRODUCT_PACKAGES += \
+    ParanoidDoze
+
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     device/oneplus/common
