@@ -19,6 +19,10 @@ PRODUCT_PACKAGES += \
     TriStateHandler \
     tri-state-key_daemon
 
+# Camera
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/oneplus-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/oneplus-whitelist.xml
+
 # Doze
 PRODUCT_PACKAGES += \
     ParanoidDoze
@@ -46,3 +50,6 @@ PRODUCT_PACKAGES += \
 # SEPolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
     $(COMMON_PATH)/sepolicy/private
+
+# Vendor
+$(call inherit-product, vendor/oneplus/common/common-vendor.mk)
