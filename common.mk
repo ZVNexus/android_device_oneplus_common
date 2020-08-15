@@ -27,12 +27,18 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.oneplus.rc
 
+# Interfaces
+PRODUCT_PACKAGES += \
+    vendor.oneplus.camera.CameraHIDL@1.0 \
+    vendor.oneplus.camera.CameraHIDL@1.0.vendor \
+    vendor.oneplus.fingerprint.extension@1.0 \
+    vendor.oneplus.fingerprint.extension@1.0.vendor \
+    vendor.oneplus.hardware.display@1.0 \
+    vendor.oneplus.hardware.display@1.0.vendor
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.oneplus
-
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/lights/android.hardware.light@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/etc/init/android.hardware.light@2.0-service.rc
 
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -40,8 +46,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    AOSPAOnePlusFrameworks \
-    EmptyOverlay
+    AOSPAOnePlusFrameworks
 
 # SEPolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \

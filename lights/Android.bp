@@ -15,8 +15,9 @@
 cc_binary {
     defaults: ["hidl_defaults"],
     name: "android.hardware.light@2.0-service.oneplus",
+    overrides: ["android.hardware.light@2.0-service"],
+    init_rc: ["android.hardware.light@2.0-service.oneplus.rc"],
     relative_install_path: "hw",
-    stem: "android.hardware.light@2.0-service",
     srcs: ["service.cpp", "Light.cpp"],
     shared_libs: [
         "libbase",
@@ -28,5 +29,5 @@ cc_binary {
         "libutils",
         "android.hardware.light@2.0",
     ],
-    vendor_overlay: true,
+    vendor: true,
 }
